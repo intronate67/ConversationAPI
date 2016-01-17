@@ -1,5 +1,7 @@
 package net.huntersharpe.conversationapi;
 
+import org.spongepowered.api.text.Text;
+
 /**
  * Created by intronate67 on 1/4/2016.
  */
@@ -8,7 +10,7 @@ public interface Prompt extends Cloneable {
     /**
      * A convenience constant for indicating the end of a conversation.
      */
-    static final Prompt END_OF_CONVERSATION = null;
+    Prompt END_OF_CONVERSATION = null;
 
     /**
      * Gets the text to display to the user when this prompt is first
@@ -17,7 +19,7 @@ public interface Prompt extends Cloneable {
      * @param context Context information about the conversation.
      * @return The text to display.
      */
-    String getPromptText(ConversationContext context);
+    Text getPromptText(ConversationContext context);
 
     /**
      * Checks to see if this prompt implementation should wait for user input
