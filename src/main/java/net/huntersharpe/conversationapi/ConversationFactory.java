@@ -2,6 +2,7 @@ package net.huntersharpe.conversationapi;
 
 import org.spongepowered.api.Game;
 import org.spongepowered.api.entity.living.player.Player;
+import org.spongepowered.api.text.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -209,8 +210,8 @@ public class ConversationFactory {
 
     private class NotPlayerMessagePrompt extends MessagePrompt {
 
-        public String getPromptText(ConversationContext context) {
-            return playerOnlyMessage;
+        public Text getPromptText(ConversationContext context) {
+            return Text.of(playerOnlyMessage);
         }
 
         @Override
